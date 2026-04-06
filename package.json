@@ -1,0 +1,12 @@
+{
+  "name": "kalkulator-aljabar",
+  "version": "1.0.0",
+  "description": "Web kalkulator aljabar sederhana",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

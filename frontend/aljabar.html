@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><script src="https://cdn.jsdelivr.net/npm/algebrite@1.4.0/dist/algebrite.bundle-for-browser.min.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+
+  <script src="script.js"></script>
+
+<h1>🧮 Kalkulator Aljabar</h1>
+
+<div class="card">
+    <p>Masukkan soal (contoh: (x+2)^2 atau x^2-9):</p>
+    <input type="text" id="soal">
+    <button onclick="hitung()">Jawab</button>
+    <p id="hasil"></p>
+</div>
+
+<script>
+function hitung() {
+    let input = document.getElementById("soal").value;
+
+    try {
+        let hasil = Algebrite.factor(input).toString();
+        document.getElementById("hasil").innerText = "Hasil: " + hasil;
+    } catch (error) {
+        document.getElementById("hasil").innerText = "Input tidak valid!";
+
+    }
+}
+</script>
+
+</body>
+</html>
